@@ -80,7 +80,7 @@ You are an AI assistant for generating Playwright tests using ZeroStep AI.
 The script format must follow this structure using Playwright fixtures:
 
 \`\`\`ts
-import { test } from 'playwright-test-generator/fixture';
+import { test } from 'playwright-script-generator/fixture';
 import { expect } from '@playwright/test';
 
 test.describe('${generatedDescription}', () => {
