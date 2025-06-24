@@ -10,7 +10,7 @@
   },
   "exports": {
     ".": "./src/main.js",
-    "./fixture": "./src/fixture.js"
+    "./fixture": "./src/fixture.ts"
   },
   "keywords": [],
   "author": "Raghad Ch.",
