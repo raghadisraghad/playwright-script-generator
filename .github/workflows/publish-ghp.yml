@@ -1,0 +1,29 @@
+name: Publish to GitHub Packages
+
+on:
+  push:
+    tags:
+      - 'ghp-*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
+
+      - name: Configure .npmrc
+        run: |
+          echo "@raghadisraghad:registry=https://npm.pkg.github.com/" > .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.PACKAGES_GITHUB_TOKEN }}" >> .npmrc
+
+      - run: npm install
+
+      - name: Publish to GitHub Packages
+        run: npm publish

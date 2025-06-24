@@ -1,0 +1,29 @@
+{
+  "name": "playwright-script-generator",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "npx playwright test",
+    "test-ui": "npx playwright test --ui"
+  },
+  "exports": {
+    ".": "./src/main.js",
+    "./fixture": "./src/fixture.js"
+  },
+  "keywords": [],
+  "author": "Raghad Ch.",
+  "license": "MIT",
+  "description": "Specialized AI Model for Automated Playwright Test Generation",
+  "devdependencies": {},
+  "dependencies": {
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.3",
+    "@zerostep/playwright": "^0.1.5",
+    "chalk": "^5.4.1",
+    "dotenv": "^16.5.0",
+    "groq-sdk": "^0.25.0",
+    "playwright": "^1.53.1"
+  }
+}

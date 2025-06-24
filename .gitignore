@@ -1,0 +1,10 @@
+node_modules/
+.env
+package-lock.json
+
+# playwright
+src/scenarios/
+playwright-report/
+test-results/
+
+.npmrc
