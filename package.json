@@ -1,9 +1,6 @@
 {
-  "name": "@raghadisraghad/playwright-test-generator",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "version": "1.0.0",
+  "name": "playwright-script-generator",
+  "version": "1.0.1",
   "main": "main.js",
   "type": "module",
   "scripts": {

@@ -1,13 +1,7 @@
-// index.js or lib.js
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import dotenv from 'dotenv';
-import {
-  generateTitle,
-  generateDescription,
-  sanitizeName,
-  codeGenerator
-} from './functions.js';
+import { generateTitle, generateDescription, sanitizeName, codeGenerator } from './functions.js';
 
 dotenv.config();
 

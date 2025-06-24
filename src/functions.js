@@ -107,5 +107,6 @@ Return ONLY the full code block.
   const content = response.choices?.[0]?.message?.content?.trim();
   if (!content || !content.includes('test.describe')) throw new Error('Invalid AI response');
   
-  return content;
+  const cleaned = content.replace(/^```(ts)?\n?/, '').replace(/```$/, '');
+  return cleaned;
 }
