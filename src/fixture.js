@@ -1,36 +1,36 @@
-import { test as base } from '@playwright/test';
-import { aiFixture, type AiFixture } from '@zerostep/playwright';
-import dotenv from 'dotenv';
-
-dotenv.config();
-
-export const test = base.extend<AiFixture>({
-  ...aiFixture(base),
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import { test as base } from '@playwright/test';
-// import { aiFixture } from '@zerostep/playwright';
+// import { aiFixture, type AiFixture } from '@zerostep/playwright';
 // import dotenv from 'dotenv';
 
 // dotenv.config();
 
-// export const test = base.extend({
-//   ...aiFixture(base, { token: process.env.ZEROSTEP_TOKEN }),
+// export const test = base.extend<AiFixture>({
+//   ...aiFixture(base),
 // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { test as base } from '@playwright/test';
+import { aiFixture } from '@zerostep/playwright';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+export const test = base.extend({
+  ...aiFixture(base, { token: process.env.ZEROSTEP_TOKEN }),
+});
 
 
 
